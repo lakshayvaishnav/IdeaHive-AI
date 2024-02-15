@@ -71,10 +71,10 @@ const Nav = () => {
                 {session?.user ? (
                     <div className="flex">
                         <Image
-                            src='/images/logo.svg'
+                            src={session?.user.image}
                             width={37}
                             height={37}
-                            className="rounded-full"
+                            className="rounded-full cursor-pointer"
                             alt="profile"
                             onClick={() => setToggleDropdown(!toggleDropdown)}
                         />
@@ -110,7 +110,7 @@ const Nav = () => {
                                 onClick={() => {
                                     signIn(provider.id)
                                 }} className="black_btn">
-                                        Sign In
+                                Sign In
                             </button>
                         ))}</>)}
             </div>
