@@ -16,7 +16,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         <label>
           <span className="font-satoshi font-semibold text-base text-gray-700">Your AI Prompt</span>
 
-          <textarea value={post}
+          <textarea value={post.prompt}
             onChange={(e) => setPost({ ...post, prompt: e.target.value })}
             placeholder="Write your post here"
             required
@@ -31,7 +31,8 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
             </span>
           </span>
 
-          <input value={post}
+          <input value={post.tag}
+            onChange={(e) => setPost({ ...post, tag: e.target.value })}
             type="text"
             placeholder="#Tag"
             required
@@ -46,7 +47,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           <button type="submit"
             disabled={submitting}
             className="px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white ">
-            {submitting ? `${type}ing...` : type}
+            {submitting ? (type === "Create" ? "Creating" : null) : type}
           </button>
         </div>
       </form>
