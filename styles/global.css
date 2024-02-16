@@ -86,7 +86,30 @@
 }
 
 .head_text {
-  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-white sm:text-6xl;
+}
+
+.neon-text {
+  text-shadow: 0 0 6px rgba(202, 228, 225, 0.92),
+    0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52),
+    0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78),
+    0 0 54px rgba(30, 132, 242, 0.92);
+}
+.white-shadow {
+  text-shadow: 0 0 1vw #fafafa;
+}
+
+
+
+.light-shadow {
+  text-shadow: 0 0 0.3vw #fafafa;
+}
+
+.purple-gradient {
+  background: #00dfff;
+  background: linear-gradient(to right, #00dfff 2%, #f500ff 87%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .orange_gradient {
@@ -102,7 +125,7 @@
 }
 
 .desc {
-  @apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl;
+  @apply mt-5 text-lg text-gray-200 sm:text-xl max-w-2xl;
 }
 
 .search_input {
