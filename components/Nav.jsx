@@ -22,11 +22,11 @@ const Nav = () => {
         <nav className="flex-between w-full mb-16 pt-3">
             <Link href='/' className="flex gap-2 flex-center" >
                 <Image
-                    src="/images/logo.svg"
+                    src="/images/logo2.jpg"
                     alt='logo'
-                    width={30}
-                    height={30}
-                    className="object-contain" />
+                    width={50}
+                    height={50}
+                    className="object-contain rounded-full" />
                 <p className="logo_text"> IdeaHive Ai</p>
             </Link>
 
@@ -39,7 +39,7 @@ const Nav = () => {
                             Create Post
                         </Link>
 
-                        <button type="button" onClick={signOut} className="outline_btn">
+                        <button type="button" onClick={signOut} className="black_btn">
                             Sign Out
                         </button>
 
@@ -80,7 +80,7 @@ const Nav = () => {
                         />
 
                         {toggleDropdown && (
-                            <div className="dropdown">
+                            <div className="dropdown text-white glassmorphism">
                                 <Link href='/profile'
                                     className="dropdown_link"
                                     onClick={() => setToggleDropdown(false)}>

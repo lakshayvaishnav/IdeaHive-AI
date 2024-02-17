@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { useState } from 'react'
 import Image from 'next/image'
@@ -27,7 +29,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
     setTimeout(() => setCopied(false), 3000);
   }
   return (
-    <div className='prompt_card'>
+    <div className='prompt_card '>
       <div className='flex justify-between items-start gap-5'>
         <div className='flex-1 flex justify-start items-center gap-3 cursor-pointer'>
           <Image
@@ -41,7 +43,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
             <h3 className='font-satoshi font-semibold text-white '>
               {post.creator.username}
             </h3>
-            <p className='font-inter text-sm text-gray-500'>
+            <p className='font-inter text-sm text-green-300'>
               {post.creator.email}
             </p>
           </div>
@@ -52,12 +54,12 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
             src={
               copied === post.prompt ? "/icons/tick.svg" : "/icons/copy.svg"
             }
-            width={12}
-            height={12}
+            width={18}
+            height={18}
             alt={copied === post.prompt ? "tick_icon" : "copy_icon"} />
         </div>
       </div>
-      <p className='my-4 font-satoshi text-sm text-gray-500' >
+      <p className='my-4 font-satoshi text-sm text-sky-400' >
         {post.prompt}
       </p>
       <p className='font-inter text-sm blue_gradient cursor-pointer'

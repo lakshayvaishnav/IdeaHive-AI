@@ -71,12 +71,14 @@ const Feed = () => {
           value={searchText}
           onChange={handleSearchChange}
           required
-          className="search_input peer  " />
+          className="search_input   " />
       </form>
 
       {/* All Prompts */}
       {searchText ? (
-        <PromptCard />
+        <PromptCardList
+          data={searchedResults}
+          handleTagClick={handleTagClick} />
       ) : (
         <PromptCardList data={allPosts} handleTagClick={handleTagClick} />
       )}

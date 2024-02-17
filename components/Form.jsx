@@ -14,19 +14,19 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
       <form onSubmit={handleSubmit}
         className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism">
         <label>
-          <span className="font-satoshi font-semibold text-base text-gray-700">Your AI Prompt</span>
+          <span className="font-satoshi font-semibold text-base text-cyan-300">Your AI Prompt</span>
 
           <textarea value={post.prompt}
             onChange={(e) => setPost({ ...post, prompt: e.target.value })}
             placeholder="Write your post here"
             required
-            className="form_textarea" />
+            className="form_textarea glassmorphism" />
         </label>
 
         <label>
-          <span className="font-satoshi font-semibold text-base text-gray-700">
+          <span className="font-satoshi font-semibold text-base text-cyan-300">
             Field of Prompt{" "}
-            <span className="font-normal">
+            <span className="font-normal ">
               (#product, #webdevelopment, #ideas, etc.)
             </span>
           </span>
@@ -36,17 +36,17 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
             type="text"
             placeholder="#Tag"
             required
-            className="form_input" />
+            className="form_input glassmorphism" />
         </label>
 
         <div className="flex-end mx-3 mb-5 gap-4">
-          <Link href='/' className="text-gray-500 text-sm" >
+          <Link href='/' className="text-white hover:text-red-500 text-sm" >
             Cancel
           </Link>
 
           <button type="submit"
             disabled={submitting}
-            className="px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white ">
+            className="px-5 py-1.5 text-sm bg-purple-400 hover:bg-cyan-400 rounded-full text-white ">
             {submitting ? (type === "Create" ? "Creating" : null) : type}
           </button>
         </div>
